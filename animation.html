@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;/* relative to the parent */
+        animation: move 5s infinite;/* name, duration, iteration count */
+    }
+    @keyframes move{
+        0%{ /*0 sec*/
+            left: 0;
+            left: 100px;
+            background-color: blue;
+        }
+        50%{ /*2.5 sec*/
+            left: 200px;
+            background-image: url(ghost_raider.jpg);
+            background-size: cover;
+            transform:rotate3d(1,1,1,360deg);
+            border-radius: 0% 50% 50% 0%;
+    }
+    100%{ /*5 sec*/
+        left: 0;
+        background-color: green;
+    }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>
